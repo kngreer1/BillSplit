@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Bill Splitter</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+<ion-card>
+
+  <ion-card-content>
+<span  >Bill Amount:</span> <span style="float:right; font-weight:bolder">{{billAmount}}</span><br>
+<span >Number of People:</span> <span style="float:right; font-weight:bolder">{{numberOfPeople}}</span><br>
+<span >Tip Percent:</span> <span style="float:right; font-weight:bolder">{{tipPercent}}%</span><hr>
+<span >Tip:</span> <span style="float:right; font-weight:bolder">{{tipAmount | currency:'USD':true}}</span><br>
+<span >Total:</span> <span style="float:right; font-weight:bolder">{{total | currency:'USD':true}}</span><br>
+<span >Individual Share:</span> <span style="float:right; font-weight:bolder">{{shareAmount | currency:'USD':true}}</span>
+
+  </ion-card-content>
+
+</ion-card>
+
+<ion-list>
+
+  <ion-item>
+    <ion-label floating>Bill Amount</ion-label>
+    <ion-input type="text" [(ngModel)]="billAmount"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Number of People</ion-label>
+    <ion-input type="text" [(ngModel)]="numberOfPeople" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Tip Percent</ion-label>
+    <ion-input type="text" [(ngModel)]="tipPercent" ></ion-input>
+  </ion-item>
+
+</ion-list>
+
+<button ion-button (click)="split()">Split the bill</button>
+
+</ion-content>

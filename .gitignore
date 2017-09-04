@@ -1,0 +1,15 @@
+BillSplit/.editorconfig
+BillSplit/hooks/*
+BillSplit/node_modules/*
+BillSplit/resources/*
+BillSplit/www/*
+BillSplit/package.json
+BillSplit/config.xml
+BillSplit/README.md
+BillSplit/ionic.config.json
+BillSplit/src/assets/icon/favicon.ico
+BillSplit/src/declarations.d.ts
+BillSplit/src/manifest.json
+BillSplit/src/service-worker.js
+BillSplit/tsconfig.json
+BillSplit/tslint.json
